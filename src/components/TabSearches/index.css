@@ -1,0 +1,18 @@
+.app-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #b3987f;
+  min-height: 100vh;
+}
+
+.image{
+  height: 200px;
+  border-radius: 10px;
+  margin: 20px;
+}
+
+.search-input{
+  width: 50%;
+  font-size: 30px;
+}
