@@ -2,20 +2,25 @@ import {Component} from 'react'
 import TabItem from '../TabItems'
 
 import './index.css'
-import json_data from './data/DA.json';
+// import json_data from './dictionary.json';
+import json_data2 from './dict2.json';  
+//https://stackoverflow.com/questions/41768215/english-json-dictionary-with-word-word-type-and-definition
+// The dictionary is arranged in this format- {WORD: {'MEANINGS':{} , 'ANTONYMS':[...] , 'SYNONYMS':[...]}}
+
+// and the 'MEANINGS' dict is arranged as 'MEANINGS':{sense_num_1:[TYPE_1, MEANING_1, CONTEXT_1, EXAMPLES], sense_num_2:[TYPE_2, MEANING_2, CONTEXT_2, EXAMPLES] and so on...}
+
 var result = [];
-for(var i in json_data)
+for(var i in json_data2)
     result.push({
-      title: i,
-      definition: json_data[i]
-    });
-console.log(result);
+    title: i,
+    definition: json_data2[i]
+  });
 
-function compare(a, b) {
-  return a.title<b.title?-1 : 1;
-}
+// function compare(a, b) {
+//   return a.title<b.title?-1 : 1;
+// }
 
-result.sort(compare);
+// result.sort(compare);
 const initialHistoryList = result;
 
 class BrowserSearch extends Component {
