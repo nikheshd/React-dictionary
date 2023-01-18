@@ -66,7 +66,11 @@ class BrowserSearch extends Component {
             className='image'
             src="https://www.timeshighereducation.com/sites/default/files/styles/the_breaking_news_image_style/public/Pictures/web/i/u/q/letters-flying-into-dictionary-pages.jpg?itok=yvC6zQqD"
             alt="app logo"
+            placeholder='Type here...'
           />
+          <div>
+            <h1 className='title'>English Dictionary</h1>
+          </div>
           <input
             type="search"
             className="search-input"
@@ -75,8 +79,12 @@ class BrowserSearch extends Component {
             onChange={this.onChangeSearchInput}
             onKeyDown={this.handleKeyDown}
           />
-          <div>
+          <div className='noresults'>
             <p>Sorry, There is no such word in our database.</p>
+            <img 
+              src="https://i0.wp.com/www.silocreativo.com/en/wp-content/uploads/2017/11/diseno-web-404-CSS.gif?resize=600%2C323&quality=100&strip=all&ssl=1"
+              alt="no results found"
+            />
           </div>
         </div>
       )
@@ -88,6 +96,9 @@ class BrowserSearch extends Component {
           src="https://www.timeshighereducation.com/sites/default/files/styles/the_breaking_news_image_style/public/Pictures/web/i/u/q/letters-flying-into-dictionary-pages.jpg?itok=yvC6zQqD"
           alt="app logo"
         />
+        <div>
+          <h1 className='title'>English Dictionary</h1>
+        </div>
         <input
           type="search"
           className="search-input"
@@ -95,13 +106,25 @@ class BrowserSearch extends Component {
           alt="search"
           onChange={this.onChangeSearchInput}
           onKeyDown={this.handleKeyDown}
+          placeholder='Type here...'
         />
-        <div>
+        <p className='resultcnt'>{searchResults.length} results found.</p>
+        <div className='results'>  
             {displayResults.map(each => (
-              <TabItem
+              <TabItem className='tabitem'
                 tabDetails={each}
               />
             ))}
+        </div>
+        <div className='endmsg'>
+          <img
+            src="https://cdn.dribbble.com/users/2367833/screenshots/7816190/media/b1aaf5c98510012b56422d1619dc62e8.gif"
+            alt="end of page"
+            className='endimg'
+          />
+          <p>You reached the end. Atmost 10 results appear in lexicographical order. 
+            Type the complete word and click enter for the exact word.
+          </p>
         </div>
       </div>
     )

@@ -2,17 +2,57 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #b3987f;
-  min-height: 100vh;
+  /* background-color: #b3987f; */
 }
 
 .image{
+  display: none;
   height: 200px;
   border-radius: 10px;
   margin: 20px;
+  text-align: center;
 }
 
 .search-input{
   width: 50%;
-  font-size: 30px;
+  font-size: 20px;
+  border-radius: 7px;
+  padding: 10px;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+}
+
+textarea:focus, input:focus{
+  outline: none;
+}
+
+.results{
+  margin-left: auto;
+  margin-right: auto;
+  width: 60%;
+}
+
+.noresults{
+  padding: 30px;
+  justify-content: center;
+  text-align: center;
+}
+
+.title{
+  font-family: "Roboto";
+  font-size: 50px;
+}
+
+img{
+  border-radius: 20px;
+}
+
+.endimg{
+  width: 30%;
+}
+.endmsg{
+  text-align: center;
+  margin-bottom: 50px;
+}
+.resultcnt{
+  text-align: center;
 }

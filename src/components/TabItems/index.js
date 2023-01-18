@@ -39,7 +39,7 @@ const ExamplesEl = props => {
       <p>Examples: </p>
         <ul>
           {examples.map(e => (
-            <li>{e}</li>
+            <li className='example'>{e}</li>
           ))}
         </ul>
     </div>
@@ -52,11 +52,11 @@ const DefinitionEl = props => {
     return (null);
   }
   return(
-    <div>
+    <div className='DefinitionEl'>
       <p>Definitions: </p>
       <ol>
         {details.map(each => (
-            <li>
+            <li className='defEl'>
               <TypeEl type = {each.type}/>
               <MeaningEl meaning = {each.meaning}/>
               <ContextEl context = {each.context}/>
